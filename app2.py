@@ -10,7 +10,7 @@ import sqlite3
 from datetime import datetime, timedelta, time
 
 # --- CONFIGURATION DE LA PAGE ---
-st.set_page_config(page_title="VeloShare - Arts et Métiers", page_icon="🚲")
+st.set_page_config(page_title="Veloy Gadz", page_icon="🚲")
 
 # --- CONFIGURATION BASE DE DONNÉES ---
 conn = sqlite3.connect('velos_ecole.db', check_same_thread=False)
@@ -105,7 +105,7 @@ with st.sidebar:
             st.rerun()
 
 # --- CONTENU PRINCIPAL ---
-st.title("🚲 VeloShare - Arts et Métiers")
+st.title("🚲 Veloy - Gadz")
 st.markdown("Réservez un vélo gratuitement pour vos déplacements.")
 
 if st.session_state['logged_in']:
@@ -113,7 +113,7 @@ if st.session_state['logged_in']:
     st.subheader("📅 Nouvelle Réservation")
     
     # Liste des vélos
-    bikes = ["VTT Rockrider", "Vélo de ville Peugeot", "Vélo Électrique", "Tandem"]
+    bikes = ["Vélo 1", "Vélo 2", "Vélo 3", "Vélo 4"]
     
     col1, col2 = st.columns(2)
     with col1:
@@ -174,13 +174,14 @@ col_f1, col_f2 = st.columns([1, 4])
 
 with col_f1:
     # Logo Arts et Métiers (URL publique Wikimedia)
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Logo_Arts_et_M%C3%A9tiers_ParisTech.png/600px-Logo_Arts_et_M%C3%A9tiers_ParisTech.png", width=80)
+    st.image("https://upload.wikimedia.org/wikipedia/commons/3/3a/Amtradszaloeil.png", width=80)
 
 with col_f2:
     st.markdown("""
     **VeloShare - Arts et Métiers** Une initiative étudiante pour la mobilité douce.  
-    *Développé avec ❤️ par [Ton Prénom]*
+    *Développé avec ❤️ par K'sséne 148Li224*
     """)
+
 
 
 
