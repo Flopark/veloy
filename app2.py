@@ -178,9 +178,10 @@ with col_f1:
 
 with col_f2:
     st.markdown("""
-    **VeloShare - Arts et Métiers** Une initiative étudiante pour la mobilité douce.  
-    *Développé avec ❤️ par K'sséne 148Li224*
+    **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
+    *Développé avec ❤️ par Seratr1 ??Li225 et K'sséne 148Li224*
     """)
+
 
 
 
