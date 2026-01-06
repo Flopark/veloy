@@ -10,7 +10,7 @@ import sqlite3
 from datetime import datetime, timedelta, time
 
 # --- CONFIGURATION DE LA PAGE ---
-st.set_page_config(page_title="VeloShare - Arts et Métiers", page_icon="🚲")
+st.set_page_config(page_title="Veloy - Gadz", page_icon="🚲")
 
 # --- CONFIGURATION BASE DE DONNÉES ---
 conn = sqlite3.connect('velos_ecole.db', check_same_thread=False)
@@ -104,14 +104,14 @@ with st.sidebar:
 
 # --- CONTENU PRINCIPAL ---
 st.title("🚲 VeloShare - Arts et Métiers")
-st.markdown("Réservez un vélo gratuitement pour vos déplacements.")
+st.markdown("Faites chauffez vos gibolles pour préparer SKZ.")
 
 if st.session_state['logged_in']:
     
     # 1. FORMULAIRE DE RÉSERVATION
     st.subheader("📅 Nouvelle Réservation")
     
-    bikes = ["VTT Rockrider", "Vélo de ville Peugeot", "Vélo Électrique", "Tandem"]
+    bikes = ["Vélo 1", "Vélo 2", "Vélo 3", "Vélo 4"]
     
     col1, col2 = st.columns(2)
     with col1:
@@ -138,7 +138,7 @@ if st.session_state['logged_in']:
                 st.success(f"✅ Réservé ! Vous avez le {bike_choice}.")
                 st.rerun()
             else:
-                st.error("⚠️ Ce vélo est déjà pris sur ce créneau (voir planning ci-dessous).")
+                st.error("⚠️ Ce vélo est déjà pris sur ce créneau (tu sais pas lire !?).")
 
     st.divider()
 
@@ -172,7 +172,7 @@ if st.session_state['logged_in']:
                         st.rerun()
                 st.markdown("---")
     else:
-        st.info("Vous n'avez aucune réservation enregistrée.")
+        st.info("Bah alors ça RIDE pas 🤙")
 
     # 3. PLANNING GÉNÉRAL
     st.subheader("🗓️ Planning global des réservations")
@@ -195,7 +195,7 @@ if st.session_state['logged_in']:
         st.write("Le planning est vide.")
 
 else:
-    st.warning("🔒 Veuillez vous identifier dans le menu de gauche.")
+    st.warning("🔒OH FADA IDENTIFIE TOI D'ABORD.")
 
 # --- PIED DE PAGE ---
 st.markdown("<br><br><br>", unsafe_allow_html=True)
@@ -211,6 +211,7 @@ with col_f2:
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
     *Développé avec ❤️ par Seratr1 ??Li225 et K'sséne 148Li224*
     """)
+
 
 
 
