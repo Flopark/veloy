@@ -79,7 +79,7 @@ with st.sidebar:
     st.markdown("### Espace Membre")
     if not st.session_state['logged_in']:
         choice = st.radio("Option", ["Connexion", "Inscription"])
-        user = st.text_input("Identifiant")
+        user = st.text_input("Identifiant (bucque Li prom's)")
         password = st.text_input("Mot de passe", type='password')
         
         if choice == "Inscription":
@@ -195,7 +195,7 @@ if st.session_state['logged_in']:
         st.write("Le planning est vide.")
 
 else:
-    st.warning("🔒OH FADA IDENTIFIE TOI D'ABORD.")
+    st.warning("🔒 OH FADA IDENTIFIE TOI D'ABORD.")
 
 # --- PIED DE PAGE ---
 st.markdown("<br><br><br>", unsafe_allow_html=True)
@@ -211,6 +211,7 @@ with col_f2:
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
     *Développé avec ❤️ par Seratr1 ??Li225 et K'sséne 148Li224*
     """)
+
 
 
 
