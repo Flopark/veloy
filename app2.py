@@ -77,7 +77,6 @@ if 'logged_in' not in st.session_state:
     st.session_state['logged_in'] = False
 
 with st.sidebar:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Logo_Arts_et_M%C3%A9tiers_ParisTech.png/600px-Logo_Arts_et_M%C3%A9tiers_ParisTech.png", width=150)
     st.markdown("### Espace Membre")
     if not st.session_state['logged_in']:
         choice = st.radio("Option", ["Connexion", "Inscription"])
@@ -174,13 +173,14 @@ col_f1, col_f2 = st.columns([1, 4])
 
 with col_f1:
     # Logo Arts et Métiers (URL publique Wikimedia)
-    st.image("https://upload.wikimedia.org/wikipedia/commons/3/3a/Amtradszaloeil.png", width=80)
+    st.image("https://drive.google.com/file/d/1CmbtFBjpVbxw7u4KNI4qccM_esby74eV/view?usp=drive_link", width=80)
 
 with col_f2:
     st.markdown("""
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
     *Développé avec ❤️ par Seratr1 ??Li225 et K'sséne 148Li224*
     """)
+
 
 
 
