@@ -104,8 +104,9 @@ with st.sidebar:
             st.rerun()
 
 # --- CONTENU PRINCIPAL ---
+
 st.title("🚲 Veloy - Gadz")
-st.markdown("Réservez un vélo gratuitement pour vos déplacements.")
+st.markdown("Prépare tes guibboles pour SKZ avec les véloy de gadz.")
 
 if st.session_state['logged_in']:
     
@@ -180,6 +181,7 @@ with col_f2:
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
     *Développé avec ❤️ par Seratr1 ??Li225 et K'sséne 148Li224*
     """)
+
 
 
 
