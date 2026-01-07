@@ -103,7 +103,7 @@ with st.sidebar:
             st.rerun()
 
 # --- CONTENU PRINCIPAL ---
-st.title("🚲 VeloShare - Arts et Métiers")
+st.title("🚲 Veloy - Gadz")
 st.markdown("Faites chauffez vos giboles pour préparer SKZ.")
 
 if st.session_state['logged_in']:
@@ -209,8 +209,9 @@ with col_f1:
 with col_f2:
     st.markdown("""
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
-    *Développé avec ❤️ par Seratr1 ??Li225 et K'sséne 148Li224*
+    *Développé avec ❤️ par Seratr1 71Li225 et K'sséne 148Li224*
     """)
+
 
 
 
