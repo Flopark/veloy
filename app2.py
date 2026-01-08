@@ -144,6 +144,12 @@ if st.session_state['logged_in']:
 
     # 2. MES RÉSERVATIONS (CORRIGÉ : AFFICHE TOUT)
     st.markdown("### 🎫 Mes réservations")
+    LOCK_CODES = {
+        "Vélo 1": "1111",
+        "Vélo 2": "2222",
+        "Vélo 3": "3333",
+        "Vélo 4": "4444"
+    }
     
     my_res = c.execute("""
         SELECT id, bike_id, start_dt, end_dt 
@@ -151,27 +157,28 @@ if st.session_state['logged_in']:
         WHERE username=? 
         ORDER BY start_dt DESC
     """, (st.session_state['user'],)).fetchall()
-    code_cadena = ["1111", "2222", "3333", "4444" ] 
+
     if my_res:
         for res in my_res:
             res_id = res[0]
             bike_name = res[1]
-            code_name = res[1]
             s_dt = datetime.fromisoformat(res[2])
             e_dt = datetime.fromisoformat(res[3])
             
+            # Récupération du code (ou "????" si le vélo n'est pas dans la liste)
+            code = LOCK_CODES.get(bike_name, "????")
+
             # On affiche une carte pour chaque réservation
             with st.container():
                 col_text, col_act = st.columns([4, 1])
                 with col_text:
-                    st.markdown(f"**{bike_name}** | code du cadena : **{code_name}** |Le {s_dt.strftime('%d/%m/%Y')} de {s_dt.strftime('%H:%M')} à {e_dt.strftime('%H:%M')}")
+                    # LE FORMAT QUE VOUS AVEZ DEMANDÉ 👇
+                    st.info(f"🚲 **{bike_name}** | 🔒 Code du cadenas : **{code}** | 📅 Le {s_dt.strftime('%d/%m/%Y')} de {s_dt.strftime('%H:%M')} à {e_dt.strftime('%H:%M')}")
                 with col_act:
-                    # Bouton rouge unique pour chaque résa
                     if st.button("Annuler", key=f"del_{res_id}", type="primary"):
                         cancel_reservation(res_id)
                         st.success("Réservation annulée !")
                         st.rerun()
-                st.markdown("---")
     else:
         st.info("Bah alors ça RIDE pas 🤙")
 
@@ -212,6 +219,7 @@ with col_f2:
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
     *Développé avec ❤️ par Seratr1 71Li225 et K'sséne 148Li224*
     """)
+
 
 
 
