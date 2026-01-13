@@ -145,10 +145,10 @@ if st.session_state['logged_in']:
     # 2. MES RÉSERVATIONS (CORRIGÉ : AFFICHE TOUT)
     st.markdown("### 🎫 Mes réservations")
     LOCK_CODES = {
-        "Vélo 1": "1111",
-        "Vélo 2": "2222",
-        "Vélo 3": "3333",
-        "Vélo 4": "4444"
+        "Vélo 1": "0225",
+        "Vélo 2": "0225",
+        "Vélo 3": "0225",
+        "Vélo 4": "0225"
     }
     
     my_res = c.execute("""
@@ -219,6 +219,7 @@ with col_f2:
     **Veloy - Gadz** Une initiative lars tradz pour évacuer les bières de vos coin².  
     *Développé avec ❤️ par Seratr1 71Li225 et K'sséne 148Li224*
     """)
+
 
 
 
